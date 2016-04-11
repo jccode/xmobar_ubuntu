@@ -52,7 +52,7 @@ keys' conf@(XConfig {XMonad.modMask = modMask}) =
 
 -- main
 main = do
-    xmproc <- spawnPipe "xmobar ~/.xmobarrc"
+    xmproc <- spawnPipe "xmobar .xmobarrc"
     xmonad $ defaults {
         logHook            = myLogHook xmproc
         }
