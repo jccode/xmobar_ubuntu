@@ -19,7 +19,16 @@ myFocusedBorderColor = "#1793D1"
 
 myLayout = avoidStruts  $  layoutHook defaultConfig
 
-myManageHook = manageDocks <+> manageHook defaultConfig
+myManageHook = manageDocks <+> myManageHook' <+> manageHook defaultConfig
+  where
+    myManageHook' = composeAll
+      [ className =? "Gimp" --> doFloat
+      , className =? "File-roller" --> doFloat
+      , className =? "QQ" --> doFloat
+      ]
+
+-- myManageHook = manageDocks <+> manageHook defaultConfig
+
 
 myLogHook xmproc = dynamicLogWithPP xmobarPP {
     ppOutput = hPutStrLn xmproc,
@@ -45,14 +54,14 @@ keys' conf@(XConfig {XMonad.modMask = modMask}) =
     , ((modMask .|. shiftMask, xK_Right), shiftToNext)
     , ((modMask .|. shiftMask, xK_Left), shiftToPrev)
 
-    , ((modMask, xK_q), spawn "killall xmobar && xmonad --recompile && xmonad --restart")
+    -- , ((modMask, xK_q), spawn "killall xmobar && xmonad --recompile && xmonad --restart")
 
     ]
 
 
 -- main
 main = do
-    xmproc <- spawnPipe "xmobar .xmobarrc"
+    xmproc <- spawnPipe "xmobar ~/.xmonad/.xmobarrc"
     xmonad $ defaults {
         logHook            = myLogHook xmproc
         }
