@@ -17,6 +17,8 @@ myModMask    = mod4Mask
 
 myFocusedBorderColor = "#1793D1"
 
+myWorkspaces = ["1:main", "2:web", "3:dev", "4:dev:chrome", "5:nautius", "6", "7", "8", "9:min"]
+
 myLayout = avoidStruts  $  layoutHook defaultConfig
 
 myManageHook = manageDocks <+> myManageHook' <+> manageHook defaultConfig
@@ -69,6 +71,7 @@ main = do
 defaults = defaultConfig {
     terminal           = myTerminal,
     modMask            = myModMask,
+    workspaces         = myWorkspaces,
     focusedBorderColor = myFocusedBorderColor,
     layoutHook         = myLayout,
     manageHook         = myManageHook,
