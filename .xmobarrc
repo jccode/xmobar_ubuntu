@@ -28,9 +28,16 @@ Config { font = "xft:Ubuntu Mono:size=9,Open Sans:size=9"
                     , Run Swap [] 10
                     , Run Com "uname" ["-s","-r"] "" 36000
                     , Run Date "%F %H:%M:%S" "date" 10
+                    , Run Battery ["-t", "<acstatus>: <left>% - <timeleft>",
+                                  "--", 
+                                  "-O", "Charging",
+                                  "-o", "Bat",
+                                  "-h", "green",
+                                  "-l", "red"
+                                  ] 10
                     , Run StdinReader
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%StdinReader% }{ %cpu% | %memory% * %swap% | %enp5s0% | %ZGSZ% | <fc=#ee9a00>%date%</fc>"
+       , template = "%StdinReader% }{ %cpu% | %memory% * %swap% | %enp5s0% | %ZGSZ% | %battery% | <fc=#ee9a00>%date%</fc>"
        }
