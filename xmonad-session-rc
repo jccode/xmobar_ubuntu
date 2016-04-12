@@ -17,6 +17,13 @@ if [ -x /usr/bin/nm-applet ]; then
     nm-applet --sm-disable &
 fi
 
+if [ -x /usr/bin/volti ]; then
+    volti &
+fi
+
+# Set background image with feh
+# feh --bg-scale /usr/share/backgrounds/warty-final-ubuntu.png &
+
 # start clipboard manager without icon
 parcellite &
 
