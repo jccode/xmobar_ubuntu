@@ -5,7 +5,7 @@ Config { font = "xft:Ubuntu Mono:size=9,Open Sans:size=9"
        , bgColor = "black"
        , fgColor = "grey"
        , alpha = 255
-       , position = TopW L 93
+       , position = TopW L 91
        , textOffset = -1
        , iconOffset = -1
        , lowerOnStart = True
@@ -39,5 +39,5 @@ Config { font = "xft:Ubuntu Mono:size=9,Open Sans:size=9"
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%StdinReader% }{ %cpu% | %memory% * %swap% | %wlp4s0% | %ZGSZ% | %battery% | <fc=#ee9a00>%date%</fc>"
+       , template = "%StdinReader% }{ %cpu% | %memory% * %swap% | %wlp4s0% | %ZGSZ% | %battery% | <fc=#ee9a00>%date%</fc>  "
        }
