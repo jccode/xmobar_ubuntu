@@ -28,6 +28,7 @@ myManageHook = manageDocks <+> myManageHook' <+> manageHook defaultConfig
       , className =? "File-roller" --> doFloat
       , className =? "Eog" --> doFloat
       , className =? "Wine" --> doFloat
+      , className =? "vlc" --> doFloat
       ]
 
 -- myManageHook = manageDocks <+> manageHook defaultConfig
@@ -43,8 +44,8 @@ myKeys x = M.union (M.fromList (keys' x)) (keys defaultConfig x)
 
 keys' conf@(XConfig {XMonad.modMask = modMask}) =
     [ ((controlMask .|. mod4Mask, xK_Delete), spawn "xscreensaver-command -lock")
-    , ((controlMask, xK_Print),               spawn "sleep 0.2; scrot -s")
-    , ((0, xK_Print),                         spawn "scrot")
+    , ((shiftMask, xK_Print),               spawn "sleep 0.2; scrot -s -e 'mv $f ~/Pictures/screenshots'")
+    , ((0, xK_Print),                         spawn "scrot -e 'mv $f ~/Pictures/screenshots'")
 
     , ((0, xF86XK_AudioLowerVolume),          spawn "pactl set-sink-volume 1 -1.5%")
     , ((0, xF86XK_AudioRaiseVolume),          spawn "pactl set-sink-volume 1 +1.5%")
