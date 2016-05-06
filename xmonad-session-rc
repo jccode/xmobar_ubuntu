@@ -31,7 +31,7 @@ fi
 parcellite &
 
 # let me go ahead with pre starting some of the apps
-kuaipan4uk &
+owncloud &
 
 
 # fixed java application problem
