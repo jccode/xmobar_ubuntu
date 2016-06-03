@@ -1,0 +1,89 @@
+!Xft.dpi:96
+!=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-==-=
+! urxvt setting
+!---------------
+! URxvt.title:Rxvt-Unicode
+! !exeURxvt.geometry: 85x27+1+4
+! !color
+! !URxvt.background:   #003366
+! URxvt.background:   #121221
+! URxvt.foreground:   #FFFFEE
+! URxvt.color0:   #000000
+! URxvt.color1:   #A80000
+! URxvt.color2:   #00A800
+! URxvt.color3:   #A8A800
+! URxvt.color4:   #0000A8
+! URxvt.color5:   #A800A8
+! URxvt.color6:   #00A8A8
+! URxvt.color7:   #A8A8A8
+! URxvt.color8:   #000054
+! URxvt.color9:   #FF0054
+! URxvt.color10:  #00FF54
+! URxvt.color11:  #FFFF54
+! URxvt.color12:  #0000FF
+! URxvt.color13:  #FF00FF
+! URxvt.color14:  #00FFFF
+! URxvt.color15:  #FFFFFF
+
+! ! transpancy
+! URxvt.shading:   64 
+! URxvt.tintColor: #EEEEEE
+
+! ! border
+! URxvt.borderLess: True 
+! !URxvt.borderColor: #B2B2B2 
+! !URxvt.thickness: 1
+! URxvt.internalBorder:1
+! URxvt.externalBorder:0 
+
+! !encoding and im
+! URxvt.multichar_encoding:UTF-8
+! !URxvt.preeditType:Root
+! URxvt.imLocale:zh_CN.UTF-8
+! URxvt.inputMethod:fcitx
+! URxvt.imFont: xft: xft:Ubuntu Mono:size=9
+! ! no scrollBar
+! URxvt.scrollBar: False
+
+! !line space
+! Urxvt.linespace:2
+! URxvt.saveLines:1000
+! !fonts
+! URxvt.font: xft:Ubuntu Mono:size=9,xft:SimSun:Bold:size=9
+! URxvt.boldFont: xft:Ubuntu Mono:Bold:size=9,xft:SimSun:Bold:size=9
+! URxvt.italicFont: xft:Ubuntu Mono:Oblique:size=9,xft:SimSun:Bold Italic:size=9
+! URxvt.boldItalicFont: xft:Ubuntu Mono:Bold Oblique:size=9,xft:SimSun:Bold Italic:size=9
+!----------------------------------
+!- End of urxvt setting
+!============================================================
+!===============================
+!
+! - Setting for xterm
+! --------------------
+XTerm*locale: true
+XTerm*utf8Title: true
+XTerm*fontMenu*fontdefault*Label: Default
+XTerm*faceName: Ubuntu Mono
+XTerm*faceNameDoublesize: SimSun
+XTerm*faceSize: 9
+XTerm*faceSize1: 9
+XTerm*faceSize2: 9
+XTerm*faceSize3: 9
+XTerm*faceSize4: 9
+XTerm*faceSize5: 9
+XTerm*faceSize6: 9
+XTerm.cjkWidth:true
+XTerm*background: #121221
+XTerm*foreground: #00E900
+!XTerm*scrollBar: true
+!XTerm*rightScrollBar: false 
+!XTerm*jumpScroll:  true
+XTerm*SaveLines: 1000
+XTerm*eightBitInput: false
+
+!----------------------
+!
+!- End of setting Xterm
+!
+!=========================
+

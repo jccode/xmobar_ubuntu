@@ -11,7 +11,7 @@ import           XMonad.Util.EZConfig     (additionalKeys)
 import           XMonad.Util.Run          (spawnPipe)
 
 
-myTerminal   = "terminator"
+myTerminal   = "xterm"
 
 myModMask    = mod4Mask
 
