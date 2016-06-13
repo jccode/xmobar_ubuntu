@@ -26,7 +26,7 @@ if [ -x /usr/bin/volti ]; then
 fi
 
 # Set background image with feh
-# feh --bg-scale /usr/share/backgrounds/warty-final-ubuntu.png &
+feh --bg-scale /tmp/wallpaper.jpg &
 
 # start clipboard manager without icon
 parcellite &
