@@ -17,7 +17,7 @@ myModMask    = mod4Mask
 
 myFocusedBorderColor = "#FFFF00"
 
-myWorkspaces = ["1:main", "2:web", "3:dev", "4:dev:chrome", "5:nautius", "6:_dev", "7:_web", "8:gimp", "9:min"]
+myWorkspaces = ["1:main", "2:web", "3:dev", "4:dev:chrome", "5:thunar", "6:_dev", "7:_web", "8:gimp", "9:min"]
 
 myLayout = avoidStruts  $  layoutHook defaultConfig
 
