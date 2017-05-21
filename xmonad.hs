@@ -9,6 +9,8 @@ import           XMonad.Hooks.ManageDocks
 import qualified XMonad.StackSet          as W
 import           XMonad.Util.EZConfig     (additionalKeys)
 import           XMonad.Util.Run          (spawnPipe)
+import           XMonad.Actions.DynamicWorkspaces
+import           XMonad.Actions.CopyWindow(copy)
 
 
 myTerminal   = "xterm"
@@ -17,7 +19,7 @@ myModMask    = mod4Mask
 
 myFocusedBorderColor = "#FFFF00"
 
-myWorkspaces = ["1:main", "2:web", "3:dev", "4:dev:chrome", "5:thunar", "6:_dev", "7:_web", "8:gimp", "9:min"]
+myWorkspaces = ["main", "web", "dev"]
 
 myLayout = avoidStruts  $  layoutHook defaultConfig
 
@@ -60,7 +62,17 @@ keys' conf@(XConfig {XMonad.modMask = modMask}) =
 
     -- , ((modMask, xK_q), spawn "killall xmobar && xmonad --recompile && xmonad --restart")
 
+    , ((modMask, xK_s), selectWorkspace def)
+    , ((modMask .|. shiftMask, xK_s), withWorkspace def (windows . W.shift))
+    , ((modMask .|. shiftMask, xK_BackSpace), removeWorkspace)
+    , ((modMask .|. shiftMask, xK_r), renameWorkspace def)
+      
     ]
+    
+    ++
+    zip (zip (repeat (modMask)) [xK_1..xK_9]) (map (withNthWorkspace W.greedyView) [0..])
+    ++
+    zip (zip (repeat (modMask .|. shiftMask)) [xK_1..xK_9]) (map (withNthWorkspace W.shift) [0..])
 
 
 -- main
