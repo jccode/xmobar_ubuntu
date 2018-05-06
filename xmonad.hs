@@ -79,6 +79,7 @@ keys' conf@(XConfig {XMonad.modMask = modMask}) =
 main = do
     xmproc <- spawnPipe "xmobar ~/.xmonad/.xmobarrc"
     xmonad $ defaults {
+        handleEventHook    = handleEventHook defaultConfig <+> docksEventHook,
         logHook            = myLogHook xmproc
         }
 
