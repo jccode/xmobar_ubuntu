@@ -5,7 +5,7 @@ xrdb -merge ~/.xmonad/.Xresources
 xpmroot ~/background.xpm &
 
 # system tray
-trayer --edge top --align right --SetDockType true --SetPartialStrut true --expand true --widthtype percent --width 10 --transparent true --tint 0x000000 --alpha 0 --height 21 &
+trayer --edge top --align right --SetDockType true --SetPartialStrut true --expand true --widthtype percent --width 10 --transparent true --tint 0x000000 --alpha 0 --height 20 &
 
 # screensaver
 xscreensaver -no-splash &
@@ -26,7 +26,10 @@ if [ -x /usr/bin/volti ]; then
 fi
 
 # Set background image with feh
-feh --bg-scale /tmp/wallpaper.jpg &
+feh --bg-scale ~/Pictures/wallpaper.jpg &
+
+# call bing wallpaper
+bingwallpaper 1 &
 
 # start clipboard manager without icon
 parcellite &

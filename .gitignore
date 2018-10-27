@@ -4,3 +4,5 @@
 *.errors
 xmonad-x86_64-linux
 xmonad.example.hs
+prompt-history
+xmonad.state

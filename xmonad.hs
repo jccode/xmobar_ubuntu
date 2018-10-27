@@ -17,9 +17,9 @@ myTerminal   = "xterm"
 
 myModMask    = mod4Mask
 
-myFocusedBorderColor = "#FFFF00"
+myFocusedBorderColor = "#F92672"
 
-myWorkspaces = ["main", "web", "dev"]
+myWorkspaces = ["1", "2", "3", "4"]
 
 myLayout = avoidStruts  $  layoutHook defaultConfig
 
@@ -30,7 +30,7 @@ myManageHook = manageDocks <+> myManageHook' <+> manageHook defaultConfig
       , className =? "File-roller" --> doFloat
       , className =? "Eog" --> doFloat
       , className =? "Wine" --> doFloat
-      , className =? "vlc" --> doFloat
+      -- , className =? "vlc" --> doFloat
       ]
 
 -- myManageHook = manageDocks <+> manageHook defaultConfig

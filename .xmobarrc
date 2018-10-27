@@ -1,11 +1,12 @@
-Config { font = "xft:Ubuntu Mono:size=9,Open Sans:size=9"
+Config { font = "xft:Ubuntu Mono:size=10,SimSun:size=10"
        , additionalFonts = []
        , borderColor = "black"
        , border = TopB
        , bgColor = "black"
        , fgColor = "grey"
        , alpha = 255
-       , position = TopW L 91
+       -- , position = TopW L 91
+       , position = Static { xpos = 0 , ypos = 0, width = 1730, height = 21 }
        , textOffset = -1
        , iconOffset = -1
        , lowerOnStart = True
@@ -16,15 +17,18 @@ Config { font = "xft:Ubuntu Mono:size=9,Open Sans:size=9"
        , allDesktops = True
        , overrideRedirect = True
        , commands = [ Run Weather "ZGSZ" ["-t","<station>: <tempC>C",
-                                          "-L","18","-H","25",
+                                          "-L","18","-H","28",
                                           "--normal","green",
                                           "--high","red",
                                           "--low","lightblue"] 36000
-                    , Run Network "enp2s0" ["-L","0","-H","32",
+                    , Run Network "wlx3c46d83e7174" ["-L","0","-H","32",
                                           "--normal","green","--high","red"] 10
-                    , Run Cpu ["-L","3","-H","50",
+                    , Run Cpu ["-L","3","-H","1000000",
                                "--normal","green","--high","red"] 10
-                    , Run Memory ["-t","Mem: <usedratio>%"] 10
+                    , Run Memory ["-t","Mem: <usedratio>%",
+                                 "-H","70",
+                                 "--normal","green",
+                                 "--high","red"] 10
                     , Run Swap [] 10
                     , Run Com "uname" ["-s","-r"] "" 36000
                     , Run Date "%F %H:%M:%S" "date" 10
@@ -39,5 +43,5 @@ Config { font = "xft:Ubuntu Mono:size=9,Open Sans:size=9"
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%StdinReader% }{ %cpu% | %memory% * %swap% | %enp5s0% | %ZGSZ% | %battery% | <fc=#ee9a00>%date%</fc>   "
+       , template = "%StdinReader% }{ %cpu% | %memory% * %swap% | %wlx3c46d83e7174% | %ZGSZ% | %battery% | <fc=#ee9a00>%date%</fc>   "
        }

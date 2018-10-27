@@ -1,3 +1,16 @@
+
+#define fonts xft:Consolas:pixelsize=12,\
+              xft:YaHei Consolas Hybrid:pixelsize=12,\
+              xft:Ubuntu Mono:pixelsize=12,\
+              xft:Noto Mono:pixelsize=12,\
+              xft:DejaVu Sans Mono:pixelsize=12,\
+              xft:SimSun:pixelsize=12,\
+              xft:Sauce Code Pro Nerd Font:pixelsize=12,\
+              xft:terminus:pixelsize:12,\
+              xft:PowerlineSymbols:pixelsize:12,\
+              xft:bitstream vera sans mono:pixelsize=12
+
+
 !Xft.dpi:96
 !=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-==-=
 ! urxvt setting
@@ -56,15 +69,19 @@
 !----------------------------------
 !- End of urxvt setting
 !============================================================
+
+urxvt*font: fonts
+
+
 !===============================
 !
 ! - Setting for xterm
 ! --------------------
 XTerm*locale: true
 XTerm*utf8Title: true
-XTerm*fontMenu*fontdefault*Label: Default
-XTerm*faceName: Ubuntu Mono
-XTerm*faceNameDoublesize: SimSun
+! XTerm*fontMenu*fontdefault*Label: Default
+! XTerm*faceName: Ubuntu Mono
+! XTerm*faceNameDoublesize: SimSun
 XTerm*faceSize: 11
 XTerm*faceSize1: 11
 XTerm*faceSize2: 11
@@ -93,3 +110,40 @@ XTerm*VT100.Translations: #override \
 !
 !=========================
 
+
+!===============================
+!
+! - Setting for uxterm
+! --------------------
+UXTerm*locale: true
+UXTerm*utf8Title: true
+UXTerm*fontMenu*fontdefault*Label: Default
+UXTerm.font: fonts
+UXTerm*faceName: DejaVu Sans Mono
+UXTerm*faceNameDoublesize: SimSun
+UXTerm*faceSize: 11
+UXTerm*faceSize1: 11
+UXTerm*faceSize2: 11
+UXTerm*faceSize3: 11
+UXTerm*faceSize4: 11
+UXTerm*faceSize5: 11
+UXTerm*faceSize6: 11
+UXTerm.cjkWidth:true
+UXTerm*background: #121221
+UXTerm*foreground: #00E900
+!UXTerm*scrollBar: true
+!UXTerm*rightScrollBar: false 
+!UXTerm*jumpScroll:  true
+UXTerm*SaveLines: 1000
+UXTerm*eightBitInput: false
+
+
+UXTerm*VT100.Translations: #override \
+                 Ctrl Shift <Key>V:    insert-selection(CLIPBOARD) \n\
+                 Ctrl Shift <Key>C:    copy-selection(CLIPBOARD)
+
+!----------------------
+!
+!- End of setting UXterm
+!
+!=========================
