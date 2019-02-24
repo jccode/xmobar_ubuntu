@@ -61,6 +61,7 @@ keys' conf@(XConfig {XMonad.modMask = modMask}) =
     , ((modMask .|. shiftMask, xK_Left), shiftToPrev)
 
     -- , ((modMask, xK_q), spawn "killall xmobar && xmonad --recompile && xmonad --restart")
+    , ((modMask, xK_b), spawn "emacsclient -ne '(make-capture-frame)'")
 
     , ((modMask, xK_s), selectWorkspace def)
     , ((modMask .|. shiftMask, xK_s), withWorkspace def (windows . W.shift))
